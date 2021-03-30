@@ -1,0 +1,101 @@
+extends layout
+
+block content 
+  body.main-layout
+    //-- loader
+    div.loader_bg
+      div.loader
+        img(src='images/index/loading.gif' alt='#')
+    div.wrapper
+      //- end loader
+      div.sidebar
+        //-- Sidebar
+        nav#sidebar
+          div#dismiss
+            i.fa.fa-arrow-left
+          ul.list-unstyled.components
+            li.active
+              a(href='/index') Home
+            li
+              a(href='/gameSystem') 配信ツール
+            li
+              a(href='/qrCodeReader')
+                | QRコードリーダー
+            li
+              a(href='/qrSheet')
+                | QRシート
+            
+      div#content
+        //- header
+        header
+          //- header inner
+          div.head_top
+            div.header
+              div.container-fluid
+                div.row
+                  div.col-md-12
+                    div.right_header_info
+                      ul
+                        li
+                          button#sidebarCollapse(type='button')
+                            img(src='images/index/menu_icon.png' alt='#')
+        section.slider_section
+          div.banner_main
+            img(src='images/index/hp.jpg' alt='#')
+            div.container-fluid.padding3
+              div.row
+                div.col-md-12
+                  div.text-bg
+                    a(href='/gameSystem') Play now
+        footer
+          div.footer
+            div.copyright
+              div.container
+                p
+                  | Copyright 2021 All Right Reserved By 
+                  a(href='https://pioneers.co.jp') Pioneers.co.jp
+        //- end footer
+
+        //- Javascript files
+      script(src='assets/jquery.min.js')
+      script(src='assets/popper.min.js')
+      script(src='assets/bootstrap.bundle.min.js')
+      script(src='assets/jquery-3.0.0.min.js')
+      //- sidebar
+      script(src='assets/jquery.mCustomScrollbar.concat.min.js')
+      script(src='https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
+      script(src='assets/custom.js')
+      script(type='text/javascript').
+        $(document).ready(function() {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+        
+            $('#dismiss, .overlay').on('click', function() {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+        
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+      script.
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+        
+            $(".zoom").hover(function() {
+        
+                $(this).addClass('transition');
+            }, function() {
+        
+                $(this).removeClass('transition');
+            });
+        });
+  block append script

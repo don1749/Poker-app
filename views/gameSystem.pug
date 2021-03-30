@@ -1,0 +1,34 @@
+extends layout
+
+block append css
+  link(rel="stylesheet" href="/assets/textillate/assets/animate.css")
+  link(rel="stylesheet" href="/assets/bootstrap-select/bootstrap-select.min.css")
+  link(rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css")
+  link(rel="stylesheet" href="/stylesheets/oddsSystem.css")
+
+block append headContents
+
+block content
+  div(style="position:absolute")
+    //- canvas(id="canvasForVideo" style="float:left; height:100%; width:100%")
+    #container(style="background-image: radial-gradient(#8b0000 60%, #6a0000 82%)")
+      video(id="video" autoplay="1" )
+      canvas(id="canvas")
+      for seatId, key in [0,1,2,3,4,5,6,7,8,9]
+        div(id="player#{seatId}Box" class="playerBox draggable border_radius" data-active="false" style="")
+          div(id="player#{seatId}Hand" class="cardHolder")
+            div(id="player#{seatId}HandLeft" class="card handLeft" style="float:left;")
+            div(id="player#{seatId}HandRight" class="card handRight" style="float:right;")
+          div(style="display:table;")
+            div(id="player#{seatId}Dealer" class="dealer" style="float:left;") D
+          div(style="display:table;")
+            div(id="player#{seatId}Action" class="actionBox" style="float:left; display:none;") C
+            div(id="player#{seatId}Chip" class="chipBox" style="float:left; display:none;")
+          div(style="clear:both; display:inline-block;")
+            div(id="player#{seatId}Odds" class="odds")
+            div(id="player#{seatId}Folded" class="folded" style="display:none;") Folded
+      script.
+        var hostAddress = "#{hostAddress}";
+
+      script(src="https://webrtc.github.io/adapter/adapter-latest.js")
+      script(src="/javascripts/video.js")
