@@ -24,25 +24,23 @@ Raiseのコア：oddsSystem, liveView, players, forDealer (jade,js), style css, 
 3. npmを開始
     ```npm start```
 
-### Raiseからデータ移し一覧
-- [ ] Settings （ボックスの外形編集・機能追加などはこちら）
+### Raiseのコアから移した一覧
+- [x] Settings （ボックスの外形編集・機能追加のボタンなどはこちら）
 - [x] Dealer
-- [x] Gamesystem
+- [x] Gamesystem（ゲームの流れ・仕組みなど）
 - [x] Socket_event
 - [x] Tableinfo
 - [ ] Assets
-- [ ] Config
 - [ ] LiveView
 - [ ] Index jade
 - [ ] Layout jade
-- [ ] OddsSystem
 - [x] Background
-- [x] StyleSheets
+- [x] StyleSheets（css)
 - [x] Index //home page
 
 # 追加項目
 - [ ] イベントメッセージ
-- [ ] 金額のスライデーhttps://codepen.io/ATC-test/pen/myPNqW
+- [x] 金額のスライデーhttps://codepen.io/ATC-test/pen/myPNqW
 
 # 編集・追加の流れ
 - Pug/jadeのモジュールを作成（Htmlページの作成と同様：html→css→js）
@@ -51,7 +49,7 @@ Raiseのコア：oddsSystem, liveView, players, forDealer (jade,js), style css, 
 
 # 現在編集中の項目
 GameSystem
-- [ ] Action-bar(slider)
+- [x] Action-bar(slider)
 - [ ] liveView
 - [ ] playerBox
 - [ ] Board
