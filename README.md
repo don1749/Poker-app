@@ -75,6 +75,8 @@ https://www.html5rocks.com/en/tutorials/getusermedia/intro/
 Canvas
 https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 
+参考にしたRaise System
+https://github.com/DDRAGON/raise
 
 ### あとがき
 英語の記事ばかり、そして変な日本語本当に申し訳ないです。
