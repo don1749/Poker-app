@@ -27,9 +27,9 @@ function renderFrame() {
   if (video.readyState === video.HAVE_ENOUGH_DATA) {
     var videoSize = { width: video.videoWidth, height: video.videoHeight };
     var canvasSize = { width: canvas.width, height: canvas.height };
-    console.log(videoSize.width + ' ' + videoSize.height + '/n' + canvasSize.width + ' ' + canvasSize.height);
     var renderSize = calculateSize(videoSize, canvasSize);
-    var xOffset = (canvasSize.width - renderSize.width) / 2;
+    var xOffset = canvasSize.width - renderSize.width;
+    console.log(renderSize.width + ' ' + renderSize.height + '\n' + canvasSize.width + ' ' + canvasSize.height);
     context.drawImage(video, xOffset, 0, renderSize.width, renderSize.height);
   }
 }

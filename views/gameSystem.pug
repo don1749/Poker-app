@@ -8,12 +8,16 @@ block append css
   link(rel="stylesheet" href="/stylesheets/game-action-bar.css")
 
 block content
-  div(class="container-fluid" style="background-image: radial-gradient(#8b0000 60%, #6a0000 82%); height:100vh; width:100vh; padding:0px")
-    canvas(id='canvas' style="height:100%; width:100%")
-      //- ゲームの背景は配信側のウェカメにする
-      video(id="video" autoplay="1" )
-    //- include ./gameSystem/actionBox.pug
+  #container
+    div(class="row" style="background-image: radial-gradient(#8b0000 60%, #6a0000 82%); width = 100vw; height = 100vh;")
+      div(class="col-xs-11")
+        canvas(id="canvas" style="height:100%; width:100%")
+        //- ゲームの背景は配信側のウェカメにする
+        video(id="video" autoplay="1" )
+      div(class="col-xs-1")
+        include ./gameSystem/actionBox.pug
 
-  block append scripts
-    script(src="https://webrtc.github.io/adapter/adapter-latest.js")
-    script(src="/javascripts/gameSystem/video.js")
+    block append scripts
+      script(src="https://webrtc.github.io/adapter/adapter-latest.js")
+      script(src="/javascripts/gameSystem/video.js")
+      script(scr="/javascripts/gameSystem/action.js")

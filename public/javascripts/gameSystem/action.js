@@ -1,5 +1,4 @@
 //slider
-
 var range = $('.input-range'),
     value = $('.range-value');
     
