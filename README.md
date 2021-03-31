@@ -81,4 +81,4 @@ https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 不明確なところがあれば、
 私の個人メール donthaido@gmail.com
 またはチャットワークでお気軽に連絡してください。
-できる限りすぐ対応します！
+できる限り早めに対応します！
