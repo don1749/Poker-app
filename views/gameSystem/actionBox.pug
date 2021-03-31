@@ -1,0 +1,14 @@
+#game-action-bar
+  #container
+    #slider(style="float:left")
+      <input class="input-range" orient="vertical" type="range" step="0.5" value="5" min="1" max="10">
+        span(class="range-value")
+
+    #action-buttons-group
+      button(id="choose-dealer" class="button") ディーラー選択     
+      button(id="fold" class="button") フォルド
+      button(id="raise" class="button") レイズ 
+      button(id="check" class="button") チェック 
+      button(id="all-in" class="button") オールイン
+      button(id="next" class="button") 次のゲームへ
+      button(id="reset" class="button") ゲームリセット 
